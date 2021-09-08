@@ -1,0 +1,210 @@
+.card {
+  max-width: 80%;
+  margin: 40px auto 0px auto;
+  text-align: center;
+}
+.card__button {
+  margin-bottom: 30px;
+  padding: 10px 40px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $colorOrange;
+  background-color: #fff;
+  border: 2px solid $colorOrange;
+  border-radius: 5px;
+  transition: all 0.3s;
+
+  &:hover {
+    color: #fff;
+    background-color: $colorOrange;
+  }
+
+  &:active {
+    background-color: $colorTransparent;
+  }
+}
+.card-content {
+  height: 0px;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 50px 20px;
+  background-color: $colorTransparent;
+  opacity: 0;
+  transition: all 0.3s;
+  overflow: hidden;
+  visibility: hidden;
+
+  &.active {
+    height: 100%;
+    .column-body {
+      height: 300px;
+      @media screen and (max-width: 500px) {
+        height: 250px;
+      }
+    }
+    opacity: 1;
+    visibility: visible;
+  }
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+}
+.card-column {
+  flex: 1 1 40%;
+  margin: 20px;
+  padding: 20px 30px 40px 30px;
+  background-color: #fff;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  @media screen and (max-width: 767px) {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px 10px;
+  }
+}
+// .column {
+// }
+.column-header {
+  margin-bottom: 30px;
+}
+// .column-img {
+// }
+.colum-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: $colorOrange;
+  @media screen and (max-width: 500px) {
+    font-size: calc(0px + 28 * (100vw / 500));
+  }
+}
+.column-subtitle {
+  font-size: 20px;
+  color: $colorGray;
+  @media screen and (max-width: 500px) {
+    font-size: calc(0px + 20 * (100vw / 500));
+  }
+}
+.column-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+// .column-temperature {
+// }
+.column-temperature-item {
+  position: relative;
+  padding: 5px 15px 5px 10px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    border: 2px solid $colorTransparent;
+    transition: all 0.3s;
+  }
+  @media screen and (max-width: 500px) {
+    padding: 5px;
+    &::after {
+      top: 0;
+      right: 0;
+    }
+  }
+}
+.column-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px 5px 10px;
+  border-bottom: 2px solid $colorTransparent;
+  transition: all 0.3s;
+  cursor: default;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    width: 0;
+    height: 0;
+    margin-top: -5px;
+    opacity: 0;
+    border-top: 5px solid transparent;
+    border-left: 5px solid $colorOrange;
+    border-bottom: 5px solid transparent;
+    transition: all 0.3s;
+  }
+
+  &:hover {
+    background-color: rgba(167, 167, 167, 0.11);
+
+    &::before {
+      opacity: 1;
+    }
+
+    &::after {
+      border: 2px solid $colorOrange;
+    }
+
+    .item-name,
+    .item-value {
+      color: $colorOrange;
+    }
+  }
+}
+// .column-temperature-item__name {
+// }
+.item-name {
+  font-size: 18px;
+  text-transform: capitalize;
+  color: $colorTransparent;
+  transition: all 0.3s;
+  @media screen and (max-width: 500px) {
+    font-size: calc(0px + 18 * (100vw / 500));
+  }
+}
+// .column-temperature-item__value {
+// }
+// .temp {
+// }
+.item-value {
+  font-size: 20px;
+  text-transform: capitalize;
+  color: $colorTransparent;
+  transition: all 0.3s;
+  @media screen and (max-width: 500px) {
+    font-size: calc(0px + 20 * (100vw / 500));
+  }
+}
+// .max {
+// }
+// .mim {
+// }
+// .feelsLike {
+// }
+// .column-weather {
+// }
+// .column-weather-item {
+// }
+// .column-weather-item__name {
+// }
+// .column-weather-item__value {
+// }
+// .cloud {
+// }
+// .humidity {
+// }
+// .pressure {
+// }
+// .timezone {
+// }
+// .visibility {
+// }
+// .wind {
+// }

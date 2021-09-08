@@ -1,0 +1,51 @@
+@import "./zeroing";
+// ----- fonts //
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+// fonts ----- //
+
+$colorOrange: #eb6e4b;
+$colorTransparent: rgb(210, 210, 210);
+$colorGray: rgb(100, 100, 100);
+
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+  max-width: 100vw;
+  font-family: "Lato", sans-serif;
+  padding:15px;
+}
+// .main {}
+// .section {}
+
+
+/* ----- loader */
+@import "./UI/loader";
+/* loader ----- */
+
+/* ----- error */
+@import "./UI/error";
+/* error ----- */
+
+/* ----- login */
+@import "./UI/login";
+/* login ----- */
+
+/* ----- header */
+@import "./sections/header";
+/* header ----- */
+
+/* ----- time */
+@import "./sections/time";
+/* time ----- */
+
+/* ----- city */
+@import "./sections/city";
+/* city ----- */
+
+/* ----- location */
+@import "./sections/location"; 
+/* location ----- */
+
+/* ----- card */
+@import "./sections/card";
+/* card ----- */

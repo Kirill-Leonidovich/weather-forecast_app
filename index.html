@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="./src/styles/css/main.min.css">
+
+  <title>currentMeteo</title>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header class="header section">
+      <div class="weather">
+
+        <div class="weather-icon">
+          <!--  -->
+        </div>
+        <div class="temperature">
+          <p class="temperature__value temp">
+            <!--  -->
+          </p>
+          <p class="temperature__units-symbol">
+            <!--  -->
+          </p>
+          <div class="temperature__units-select">
+            <div class="temperature__units-select-current">
+              <p class="temperature__units-select-current__value">Kelvin</p>
+            </div>
+            <div class="temperature__units-select-body">
+              <p class="temperature__units-select__value value-kelvin">kelvin</p>
+              <p class="temperature__units-select__value value-celsius">celsius</p>
+              <p class="temperature__units-select__value value-fahrenheit">fahrenheit</p>
+            </div>
+          </div>
+          <div class="temperature__description">
+            <!--  -->
+          </div>
+        </div>
+      </div>
+      <!-- /.weather -->
+
+      <div class="heading">
+        <p class="heading__title">
+          current <span>meteo</span>
+        </p>
+        <p class="heading__subtitle">
+          more than <span>200,000</span> countries are with us
+        </p>
+      </div>
+      <!-- /.heading -->
+
+      <div class="current-city">
+        <p class="current-city__name">
+          <!--  -->
+        </p>
+        <p class="current-city__time time">
+          <!--  -->
+        </p>
+        <p class="current-city__date date">
+          <!--  -->
+        </p>
+      </div>
+      <!-- /.city -->
+
+    </header>
+    <!-- /.header -->
+
+    <main class="main section">
+      <nav class="time-nav">
+        <ul class="time-nav__list">
+          <!--  -->
+        </ul>
+      </nav>
+      <!-- /.city-nav -->
+
+      <nav class="city-nav">
+        <!-- ///////////////////////////////////////////////////////////// -->
+        <ul class="city-nav__list">
+          <li>
+            <a href="" class="city-nav__link">minsk</a>
+          </li>
+          <li>
+            <a href="" class="city-nav__link">hrodna</a>
+          </li>
+          <li>
+            <a href="" class="city-nav__link">mogilev</a>
+          </li>
+          <li>
+            <a href="" class="city-nav__link">gomel</a>
+          </li>
+          <li>
+            <a href="" class="city-nav__link">brest</a>
+          </li>
+          <li>
+            <a href="" class="city-nav__link">vitebsk</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.city-nav -->
+
+      <div class="location">
+        <div class="location-search">
+          <div class="location-search__box">
+            <input class="location-search__input" id="locationInput" type="text" placeholder=" ">
+            <label class="location-search__label" for="locationInput">enter city</label>
+          </div>
+          <button class="location-search__btn" id="locationSearchBtn">to find</button>
+        </div>
+
+        <div class="location-buttons">
+          <button class="location-btn location-current-btn">
+            <p class="location-btn__icon location-current__icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </p>
+          </button>
+
+          <div class="sing-in">
+            <button class="location-btn btn_sing-in">
+              <p class="location-btn__icon sing-in__icon">
+                <i class="fas fa-user"></i>
+              </p>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- /.location -->
+
+    </main>
+    <!-- /.main -->
+
+    <div class="card">
+      <!-- ///////////////////////////////////////////////////////////// -->
+      <button class="card__button">
+        more details...
+      </button>
+
+      <div class="card-content">
+        <div class="card-column column">
+          <div class="column-header">
+            <div class="column-img">
+              <!--  -->
+            </div>
+            <div class="colum-title">
+              Temperature
+            </div>
+
+            <div class="column-subtitle">
+              temperature
+            </div>
+          </div>
+
+          <div class="column-body column-temperature">
+            <div class="column-temperature-item column-item">
+              <p class="column-temperature-item__name item-name">
+                <!--  -->
+              </p>
+              <p class="column-temperature-item__value temp item-value">
+                <!--  -->
+              </p>
+            </div>
+            <div class="column-temperature-item column-item">
+              <p class="column-temperature-item__name item-name">
+                <!--  -->
+              </p>
+              <p class="column-temperature-item__value temp max item-value">
+                <!--  -->
+              </p>
+            </div>
+            <div class="column-temperature-item column-item">
+              <p class="column-temperature-item__name item-name">
+                <!--  -->
+              </p>
+              <p class="column-temperature-item__value temp mim item-value">
+                <!--  -->
+              </p>
+            </div>
+            <div class="column-temperature-item column-item">
+              <p class="column-temperature-item__name item-name">
+                <!--  -->
+              </p>
+              <p class="column-temperature-item__value temp feelsLike item-value">
+                <!--  -->
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-column column">
+          <div class="column-header">
+            <div class="column-img">
+              <!--  -->
+            </div>
+            <div class="colum-title">
+              Weather
+            </div>
+
+            <div class="column-subtitle">
+              description
+            </div>
+          </div>
+
+          <div class="column-body column-weather">
+            <div class="column-weather-item column-item">
+              <p class="column-weather-item__name item-name">
+                <!--  -->
+              </p>
+              <p class="column-weather-item__value cloud item-value">
+                <!--  -->
+              </p>
+            </div>
+            <div class="column-weather-item column-item">
+              <p class="column-weather-item__name humidity item-name">
+                <!--  -->
+              </p>
+              <p class="column-weather-item__value pressure item-value">
+                <!--  -->
+              </p>
+            </div>
+            <div class="column-weather-item column-item">
+              <p class="column-weather-item__name timezone item-name">
+                <!--  -->
+              </p>
+              <p class="column-weather-item__value visibility item-value">
+                <!--  -->
+              </p>
+            </div>
+            <div class="column-weather-item column-item">
+              <p class="column-weather-item__name item-name">
+                <!--  -->
+              </p>
+              <p class="column-weather-item__value wind item-value">
+                <!--  -->
+              </p>
+            </div>
+            <div class="column-weather-item column-item">
+              <p class="column-weather-item__name item-name">
+                <!--  -->
+              </p>
+              <p class="column-weather-item__value item-value">
+                <!--  -->
+              </p>
+            </div>
+            <div class="column-weather-item column-item">
+              <p class="column-weather-item__name item-name">
+                <!--  -->
+              </p>
+              <p class="column-weather-item__value item-value">
+                <!--  -->
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.card -->
+
+  </div>
+  <!-- /.wrapper -->
+
+  <script src="https://kit.fontawesome.com/5c6ff8eb8e.js" crossorigin="anonymous"></script>
+  <!-- fontawesome -->
+
+  <script src="./src/index.js" type="module"></script>
+
+</body>
+
+</html>

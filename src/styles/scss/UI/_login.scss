@@ -1,0 +1,233 @@
+.none {
+  background-color: red;
+}
+.registration,
+.verification {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 80;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 20px;
+  background-color: rgba($color: #000000, $alpha: 0.9);
+  opacity: 0;
+  transition: all 0.7s;
+  visibility: hidden;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+
+    .act-card {
+      margin-top: 0%;
+    }
+  }
+
+  .act-btn-close {
+    position: absolute;
+    top: 20px;
+    right: 5%;
+    display: block;
+    width: 30px;
+    height: 30px;
+    transform: rotate(45deg);
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 12.5px;
+      display: block;
+      width: 30px;
+      height: 5px;
+      background-color: $colorOrange;
+      transition: all 0.3s;
+      pointer-events: none;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 12.5px;
+      display: block;
+      width: 5px;
+      height: 30px;
+      background-color: #fff;
+      transition: all 0.3s;
+      pointer-events: none;
+    }
+    &:hover {
+      &::after {
+        background-color: #df2a1d;
+      }
+      &::before {
+        background-color: #df2a1d;
+      }
+    }
+  }
+}
+
+.act-card {
+  width: 300px;
+  margin-top: -100%;
+  transition: all 0.7s;
+}
+
+.act__title {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 700;
+  color: $colorOrange;
+
+  span {
+    color: $colorGray;
+  }
+}
+
+.act__subtitle {
+  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 25px;
+  color: $colorTransparent;
+}
+
+.verefication__btn_go-to-sing-up {
+  margin: 0px 15px;
+  font-size: 15px;
+  color: $colorOrange;
+  white-space: nowrap;
+}
+
+// ---- all input and label //
+.mandatory {
+  position: relative;
+
+  &::after {
+    content: "*";
+    position: absolute;
+    margin-left: 5px;
+    margin-top: -10px;
+    font-size: 25px;
+    color: #df2a1d;
+  }
+
+  &.valid {
+    &::after {
+      content: "\2714";
+      color: rgb(37, 189, 44);
+    }
+  }
+
+  &.no-valid {
+    .act__input {
+      position: relative;
+      border: 2px solid #df2a1d;
+    }
+
+    .remark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #df2a1d;
+    }
+  }
+}
+
+.act__item {
+  position: relative;
+  padding: 20px 0px;
+}
+
+.act__input {
+  width: 100%;
+  padding: 15px 10px;
+  font-size: 16px;
+  color: $colorGray;
+
+  &:focus + .act__label,
+  &:not(:placeholder-shown) + .act__label {
+    left: calc(100% + 20px);
+    font-size: 20px;
+    font-weight: 700;
+    color: $colorOrange;
+    @media screen and (max-width: 767px) {
+      left: 0px;
+      top: 5px;
+      font-size: 10px;
+    }
+  }
+}
+
+.act__label {
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  font-size: 15px;
+  text-transform: capitalize;
+  white-space: nowrap;
+  color: $colorGray;
+  transition: all 0.5s;
+  pointer-events: none;
+}
+// all input and label ----- //
+
+.registration-agreement {
+  position: relative;
+  display: block;
+  height: 20px;
+  margin: 20px 0px;
+  cursor: pointer;
+
+  &.checked {
+    .registration-agreement__checkbox_castom {
+      background-color: $colorOrange;
+    }
+
+    .registration-agreement__label {
+      color: $colorGray;
+    }
+  }
+}
+
+.registration-agreement__checkbox_castom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: $colorGray;
+  border: 3px solid #fff;
+  transition: all 0.3s;
+}
+
+.registration-agreement__label {
+  position: absolute;
+  margin-left: 40px;
+  font-size: 18px;
+  white-space: nowrap;
+  color: #df2a1d;
+  transition: all 0.5s;
+  pointer-events: none;
+}
+
+.act__button {
+  padding: 15px 40px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: $colorOrange;
+  transition: all 0.3s;
+
+  &:hover {
+    box-shadow: 0 0 0 2px $colorOrange, 0 0 0 4px #fff;
+  }
+
+  &:active {
+    background-color: $colorGray;
+  }
+}

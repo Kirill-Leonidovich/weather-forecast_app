@@ -1,0 +1,201 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+// .section {
+// }
+
+/* ----- weather */
+.weather {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.weather-icon {
+  @media screen and (max-width: 500px) {
+   display: none;
+  }
+}
+.temperature {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.temperature__value {
+  font-size: calc(15px + 10 * ((100vw - 320px)) / 1280);
+  color: $colorGray;
+  @media screen and (max-width: 320px) {
+    font-size: calc(10px + 5 * (100vw / 320));
+  }
+}
+// .temp {
+// }
+.temperature__units-symbol {
+  margin: -10px 0px 0px 10px;
+  padding: 5px;
+  white-space: nowrap;
+  color: $colorGray;
+  span {
+    pointer-events: none;
+  }
+  @media screen and (max-width: 500px) {
+    margin: -10px 0 0 0;
+
+  }
+}
+.temperature__units-select {
+  position: absolute;
+  top: 90%;
+  left: 0px;
+  display: inline-block;
+  opacity: 0;
+  text-align: center;
+  border: 2px solid $colorTransparent;
+  background-color: #fff;
+  transition: all 0.3s;
+  visibility: hidden;
+  &.showSelect {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+// .temperature__units-select-current {
+// }
+.temperature__units-select-current__value {
+  font-size: 20px;
+  text-transform: capitalize;
+  color: $colorGray;
+}
+.temperature__units-select-body {
+  padding: 5px 20px;
+  background-color: #fff;
+}
+.temperature__units-select__value {
+  margin: 5px 0px;
+  padding: 5px;
+  text-transform: capitalize;
+  color: $colorGray;
+  border: 2px solid $colorOrange;
+  transition: all 0.3s;
+
+  &:hover {
+    color: #fff;
+    background-color: $colorOrange;
+  }
+}
+// .value-kelvin {
+// }
+// .value-celsius {
+// }
+// .value-fahrenheit {
+// }
+.temperature__description {
+  margin-left: 30px;
+  @media screen and (max-width: 992px) {
+    display: none;
+  }
+}
+.weather__params {
+  margin: 5px 0px;
+  font-size: 15px;
+  white-space: nowrap;
+  color: $colorTransparent;
+  transition: all 0.3s;
+
+  &:hover {
+    color: $colorGray;
+  }
+}
+/* weather ----- */
+
+/* ----- heading */
+.heading {
+  flex: auto;
+  text-align: center;
+  @media screen and (max-width: 767px) {
+    text-align: end;
+  }
+  @media screen and (max-width: 500px) {
+    padding: 20px 0;
+    max-width: 60%;
+  }
+}
+.heading__title {
+  font-size: calc(20px + 25 * ((100vw - 320px)) / 1280);
+  font-weight: 700;
+  color: $colorGray;
+  span {
+    text-transform: uppercase;
+    color: $colorOrange;
+  }
+  @media screen and (max-width: 320px) {
+    font-size: calc(10px + 10 * (100vw / 320));
+  }
+}
+.heading__subtitle {
+  font-size: calc(10px + 8 * ((100vw - 320px)) / 1280);
+  text-transform: lowercase;
+  word-spacing: 5px;
+  color: $colorTransparent;
+  span {
+    font-size: 130%;
+    font-weight: 900;
+    color: $colorOrange;
+  }
+  @media screen and (max-width: 320px) {
+    font-size: calc(0px + 10 * (100vw / 320));
+  }
+}
+/* heading ----- */
+
+/* ----- current-city */
+.current-city {
+  flex: 1;
+  text-align: end;
+  @media screen and (max-width: 767px) {
+    flex: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin-bottom: 15px;
+    .current-city__name,
+    .time,
+    .date {
+      margin-bottom: 0;
+    }
+  }
+}
+.current-city__name {
+  margin-bottom: 15px;
+  font-size: calc(20px + 5 * ((100vw - 767px)) / 1280);
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  color: $colorGray;
+  @media screen and (max-width: 767px) {
+    font-size: calc(10px + 10 * (100vw / 767));
+  }
+}
+// .current-city__time {
+// }
+.time,
+.date {
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: $colorTransparent;
+  transition: all 0.3s;
+  &:hover {
+    color: $colorGray;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: calc(10px + 10 * (100vw / 767));
+  }
+}
+// .current-city__date {
+// }
+/* current-city ----- */
