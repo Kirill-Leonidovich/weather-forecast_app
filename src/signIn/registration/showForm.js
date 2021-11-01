@@ -20,28 +20,24 @@ export const showRegistrationForm = () => {
               User Name!
             </label>
           </div>
-  
           <div class="act__item mandatory registration-mail">
             <input class="act__input" id="inputMailRegistration" type="email" placeholder=" ">
             <label class="act__label" id="labelMailRegistration" for="inputMail">
               E-mail!
             </label>
           </div>
-
           <div class="act__item registration-phone">
             <input class="act__input" id="inputPhone" type="tel" placeholder=" ">
             <label class="act__label" id="labelPhone" for="inputPhone">
               Phone
             </label>
           </div>
-
           <div class="act__item registration-dateofbirth">
             <input class="act__input" id="inputDateofbirth" type="date" placeholder=" ">
             <label class="act__label" id="labelDateofbirth" for="inputDateofbirth">
               Date of Birth
             </label>
           </div>
-  
           <div class="act__item mandatory registration-password-one">
             <input class="act__input" id="inputPasswordRegistrationOne" type="password" placeholder=" ">
             <label class="act__label" id="labelPasswordRegistrationOne" for="inputPasswordOne">
@@ -54,16 +50,13 @@ export const showRegistrationForm = () => {
               Repeat password!
             </label>
           </div>
-  
           <div class="registration-agreement" id="castomCheckBox">
             <span class="registration-agreement__checkbox_castom"></span>
-  
             <input class="registration-agreement__input" id="inputCheckBox" type="checkbox" hidden>
             <label class="registration-agreement__label" id="labelCheckBox" for="inputCheckBox">
               I accept the terms of the agreement
             </label>
           </div>
-  
           <button class="act__button" id="buttonSignUp" type="submit" disabled>
             registration
           </button>
