@@ -30,7 +30,6 @@ export const showVerificationForm = () => {
               Repeat password!
             </label>
           </div>
-
           <button class="act__button" id="buttonSingIn" type="submit">
               sing in
           </button>
