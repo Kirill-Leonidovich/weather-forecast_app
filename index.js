@@ -1,3 +1,3 @@
 import { start } from "./src/start/start.js";
 
-start();
+window.addEventListener('load', start)

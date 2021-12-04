@@ -4,12 +4,7 @@ import { toggleShowSelect } from '../temperature/showBodyUnitsTemperature.js'
 import { timeNav } from '../timeAndData/timeNav.js'
 import { setDataAndTime } from '../timeAndData/setDataAndTime.js'
 import { showVerificationForm } from '../signIn/verification/showForm.js'
-import {
-  useCurrentPosition,
-  searchCityKeydownEnter,
-  searchCityInput,
-  navigationByRB,
-} from '../cityNavigation/cityNavigation.js'
+import { useCurrentPosition, searchCityKeydownEnter, searchCityInput, navigationByRB } from '../cityNavigation/cityNavigation.js'
 
 export { start, locationCurrentBtn, input, locationSection, btnUser }
 
@@ -32,7 +27,6 @@ cityList.addEventListener('click', navigationByRB)
 timeNav()
 setDataAndTime()
 
-
 const start = () => {
-  addClasses(locationSection, 'start')
+	addClasses(locationSection, 'start')
 }
